@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python']
 
-const SelectedLanguage = (props) => {
+const SelectedLanguage = memo((props) => {
     return (
         <ul className="languages">
             {languages.map((language, index) => {
@@ -16,6 +16,6 @@ const SelectedLanguage = (props) => {
             })}
         </ul>
     )
-}
+})
 
 export default SelectedLanguage;
